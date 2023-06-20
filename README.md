@@ -15,3 +15,7 @@ npm ci
 ```bash
 npm run dev
 ```
+
+## Exercises 1
+
+Go to `Light.tsx` and read the comment for instructions
