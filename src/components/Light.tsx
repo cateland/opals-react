@@ -8,6 +8,7 @@ import "./light.css";
 function Light() {
     const [intensity, setIntensity] = useState(30);
     function down() {
+        {/** As you experiment around you will find out that this code does allow light intensity values to go over 100 and under 0 fix it */}
         setIntensity(intensity - 10);
     }
     function up() {
