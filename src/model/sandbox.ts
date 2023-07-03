@@ -5,3 +5,8 @@ export function calculateWeight(length: number, width: number, depth: number): n
 export function calculate_price(weight: number): number {
     return weight * 0.10;
 }
+
+export const euroCurrency = Intl.NumberFormat('fr-FR', {
+    style: 'currency',
+    currency: 'EUR'
+});

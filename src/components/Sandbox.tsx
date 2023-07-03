@@ -1,19 +1,31 @@
-import { useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
 import * as sandbox from "../model/sandbox"
 import "./sandbox.css";
+import { euroCurrency } from "../model/sandbox";
 function Sandbox() {
     const [length, setLength] = useState(0);
     const [width, setWidth] = useState(0);
     const [depth, setDepth] = useState(0);
+    const [price, setPrice] = useState<null | number>(null);
 
     const weight = useMemo(() => {
         return sandbox.calculateWeight(length, width, depth);
     }, [length, width, depth])
+
+    useEffect(() => {
+        setPrice(null);
+    }, [length, width, depth])
+
+    function caculateQuote(event: FormEvent<HTMLFormElement>){
+        event.preventDefault();
+        setPrice(sandbox.calculate_price(weight));
+    }
+
     return (
         <>
             <h1>Build A Sandbox</h1>
             <div id="sandbox">
-                <form>
+                <form onSubmit={caculateQuote}>
                     <div className="fields">
                         <div>
                             <label htmlFor="length">Length</label>
@@ -37,9 +49,12 @@ function Sandbox() {
                             </div>
                         </div>
                     </div>
-                    <div className="weight">You need {weight} kg of sand 🏝</div>
-                    <button type="submit">Get A Quote</button>
+                    <output className="weight">You need {weight} kg of sand 🏝</output>
+                    <button>Get A Quote</button>
                 </form>
+                {price && <div className="quote">
+                    Get your personnal Pétanque field for only {euroCurrency.format(price)}
+                </div>}
             </div>
         </>
     );
