@@ -25,7 +25,7 @@ function Sandbox() {
         <>
             <h1>Build A Sandbox</h1>
             <div id="sandbox">
-                <form onSubmit={caculateQuote}>
+                <form onSubmit={caculateQuote} name="Sanbox quote calculation form">
                     <div className="fields">
                         <div>
                             <label htmlFor="length">Length</label>
