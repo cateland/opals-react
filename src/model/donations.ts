@@ -79,7 +79,7 @@ function generateUniqueID(): string {
 /**
  * Generates a list of Donation, each call generate a new different list
  */
-export function listDonations(): Array<Donation> {
+export function list(): Array<Donation> {
     if (donations.length > 0) {
         return donations;
     }
