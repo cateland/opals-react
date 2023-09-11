@@ -1,0 +1,83 @@
+/* Donations */
+
+#donations {
+    @apply mt-8 max-w-4xl mx-auto;
+  }
+  #donations .wrapper {
+    @apply mb-4 align-middle inline-block min-w-full shadow overflow-hidden rounded-lg border-b border-slate-300;
+  }
+  #donations a {
+    @apply underline text-indigo-500 font-semibold;
+  }
+  #donations .eat-soon {
+    @apply px-4 py-2 text-base font-medium bg-red-200 text-red-800 rounded-full;
+  }
+  #donations table {
+    @apply min-w-full table-fixed;
+  }
+  #donations table th {
+    @apply bg-transparent px-6 py-4 border-b border-slate-300 bg-indigo-700 text-base font-medium uppercase tracking-wider text-center text-white;
+  }
+  #donations table th a {
+    @apply no-underline text-white;
+  }
+  #donations table td {
+    @apply px-6 py-4 whitespace-nowrap border-b border-slate-300 text-lg font-medium text-slate-900 text-center;
+  }
+  #donations table tbody {
+    @apply bg-white;
+  }
+  #donations table th.item {
+    @apply pl-12 text-left;
+  }
+  #donations table td.item {
+    @apply pl-12 font-semibold text-left w-2/5;
+  }
+  #donations table td.quantity {
+    @apply w-1/5;
+  }
+  #donations table td.expires {
+    @apply w-2/5;
+  }
+  #donations table td .id {
+    @apply text-slate-400 -ml-8 mr-4 text-base tabular-nums inline-block w-36;
+  }
+  #donations table td .emoji {
+    @apply mr-1;
+  }
+  #donations .footer {
+    @apply text-center bg-white max-w-4xl mx-auto text-lg py-8;
+  }
+  #donations .footer .pagination {
+    @apply inline-flex shadow-sm;
+  }
+  #donations .footer a {
+    @apply -ml-px inline-flex items-center px-3 py-2 border border-slate-300 bg-white text-base font-medium text-slate-600 no-underline;
+  }
+  #donations .footer a:hover {
+    @apply bg-slate-300;
+  }
+  #donations .footer a.active {
+    @apply bg-indigo-700 text-white;
+  }
+  #donations .footer a:first-child {
+    @apply rounded-l-md;
+  }
+  #donations .footer a:last-child {
+    @apply rounded-r-md;
+  }
+  #donations .footer a.previous {
+    @apply rounded-l-md;
+  }
+  #donations .footer a.next {
+    @apply rounded-r-md;
+  }
+  #donations form {
+    @apply flex items-center justify-end mb-4;
+  }
+  #donations form select {
+    @apply appearance-none bg-slate-200 border border-slate-400 text-slate-700 py-0 pr-7 mr-2 h-8 rounded-lg font-semibold cursor-pointer text-sm mx-1;
+  }
+  #donations form select:focus {
+    @apply outline-none bg-slate-200 border-slate-500;
+  }
