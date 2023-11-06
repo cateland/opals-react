@@ -49,7 +49,7 @@ h3 {
   @apply text-5xl text-left font-extrabold leading-10;
 }
 #projects ul {
-  @apply mt-8 space-y-5;
+  @apply space-x-5;
 }
 #projects ul li a {
   @apply inline-flex items-center font-medium text-xl px-2 py-1 rounded-md hover:bg-slate-300 text-slate-700;
