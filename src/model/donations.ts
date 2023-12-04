@@ -126,3 +126,22 @@ export function compareValues(key:  SortOptions["sortBy"], order: SortOptions["s
         return order === "desc" ? comparison * -1 : comparison;
     };
 }
+
+export function updateDonationQuantity(
+    donations: Array<Donation>,
+    donationId: string,
+    newQuantity: number
+): Array<Donation> {
+    if (newQuantity <= 0) {
+        // Remove the donation if the new quantity is 0 or less
+        return donations.filter((donation) => donation.id !== donationId);
+    } else {
+        // Update the quantity of the specified donation
+        return donations.map((donation) => {
+            if (donation.id === donationId) {
+                return { ...donation, quantity: newQuantity };
+            }
+            return donation;
+        });
+    }
+}

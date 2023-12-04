@@ -25,6 +25,12 @@ export function DonationsList() {
         );
     };
 
+    const onUpdateQuantity = (id: string) => (quantity: number) => {
+        updateDonnations(
+            donations.updateDonationQuantity(donationsState, id, quantity)
+        );
+    };
+
     return (
         <>
             <h1>Food Bank Donations</h1>
@@ -61,11 +67,18 @@ export function DonationsList() {
                                         Days Until Expires
                                     </SortButton>
                                 </th>
+                                <th>Edit</th>
                             </tr>
                         </thead>
                         <tbody>
                             {donationsState.map((donation) => (
-                                <Donation key={donation.id} donation={donation}/>
+                                <Donation
+                                    key={donation.id}
+                                    donation={donation}
+                                    onUpdateQuantity={onUpdateQuantity(
+                                        donation.id
+                                    )}
+                                />
                             ))}
                         </tbody>
                     </table>

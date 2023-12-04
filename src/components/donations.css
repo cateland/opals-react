@@ -81,3 +81,8 @@
   #donations form select:focus {
     @apply outline-none bg-slate-200 border-slate-500;
   }
+
+  #donations tr td button {
+    @apply py-2 px-4 mt-6 border border-transparent font-semibold text-base rounded-md text-white bg-indigo-700 transition duration-150 ease-in-out outline-none hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700;
+  }
+  
