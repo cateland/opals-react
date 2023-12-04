@@ -9,7 +9,7 @@ body {
 }
 
 nav {
-  @apply py-3 px-6 flex justify-end;
+  @apply py-3 px-6 flex justify-center;
 }
 
 nav ul {
@@ -52,5 +52,9 @@ h3 {
   @apply space-x-5;
 }
 #projects ul li a {
-  @apply inline-flex items-center font-medium text-xl px-2 py-1 rounded-md hover:bg-slate-300 text-slate-700;
+  @apply inline-flex items-center font-medium text-xl px-2 py-1 rounded-md hover:bg-slate-300 text-slate-700 underline;
+}
+
+#projects ul li a.active {
+  @apply no-underline;
 }

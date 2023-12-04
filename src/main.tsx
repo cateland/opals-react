@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Light from "./components/Light.tsx";
 import Sandbox from "./components/Sandbox.tsx";
-import Donations from "./components/Donations.tsx";
+import { DonationsList } from "./components/DonationList.tsx";
 import App from "./App.tsx";
 
 const router = createBrowserRouter([
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
         children: [
             { path: "/light", element: <Light /> },
             { path: "/sandbox", element: <Sandbox /> },
-            { path: "/donations", element: <Donations /> },
+            { path: "/donations", element: <DonationsList /> },
         ],
     },
 ]);
